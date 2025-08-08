@@ -1,0 +1,21 @@
+.overview-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card.green {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.card.red {
+  background-color: #f8d7da;
+  color: #721c24;
+}
