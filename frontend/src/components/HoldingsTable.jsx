@@ -2,10 +2,9 @@ import React from 'react';
 import { useOutletContext } from 'react-router-dom';
 
 const HoldingsTable = () => {
-  // Use the useOutletContext hook to get the data from the parent Dashboard component
+  
   const { holdings } = useOutletContext();
 
-  // Now, we can check for the holdings data
   if (!holdings || holdings.length === 0) {
     return <div className="p-8 text-center text-gray-500">No holdings data available.</div>;
   }

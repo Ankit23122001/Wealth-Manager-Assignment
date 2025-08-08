@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', getHoldings);
 router.get('/allocation', getAllocation);
-router.get('/performance', getPerformanceComparison); // New route
-router.get('/summary', getPortfolioSummary); // New route
+router.get('/performance', getPerformanceComparison); 
+router.get('/summary', getPortfolioSummary); 
 
 export default router;

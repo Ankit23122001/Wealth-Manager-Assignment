@@ -1,5 +1,3 @@
-// src/components/OverviewCards.jsx
-import React from 'react';
 import '../styles/Dashboard.css';
 
 const OverviewCards = ({ summary, holdingsCount }) => {

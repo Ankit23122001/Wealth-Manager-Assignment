@@ -3,9 +3,7 @@ import { Outlet } from 'react-router-dom';
 import api from '../api';
 import OverviewCards from '../components/OverviewCards';
 import AllocationChart from '../components/AllocationChart';
-import HoldingsTable from '../components/HoldingsTable'; // Keep the import, as the data is needed
-import PerformanceChart from '../components/PerformanceChart'; // Keep the import, as the data is needed
-import TopPerformers from '../components/TopPerformers'; // Keep the import, as the data is needed
+
 
 const Dashboard = () => {
     // State to hold all the fetched data
@@ -44,10 +42,9 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard p-8">
-            {/* These components are part of the main dashboard layout and are always visible */}
+
             <OverviewCards summary={summary} holdingsCount={holdings.length} />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8">
-                {/* Render AllocationChart components if data exists */}
                 {allocation.bySector && (
                     <AllocationChart
                         data={allocation.bySector}
@@ -63,12 +60,6 @@ const Dashboard = () => {
                     />
                 )}
             </div>
-
-            {/*
-              The <Outlet /> component renders the content of the nested routes.
-              For example, if you are at '/dashboard/holdings', the HoldingsTable component
-              will be rendered right here.
-            */}
             <Outlet context={{ summary, holdings, allocation, performance }} />
         </div>
     );

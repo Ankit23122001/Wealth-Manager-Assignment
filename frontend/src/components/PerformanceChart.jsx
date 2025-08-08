@@ -13,7 +13,6 @@ import {
 import { Line } from 'react-chartjs-2';
 import { useOutletContext } from 'react-router-dom';
 
-// Register all the components needed for your Line chart
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -27,10 +26,8 @@ ChartJS.register(
 
 
 const PerformanceChart = () => {
-    // Use the useOutletContext hook to get the data from the parent Dashboard component
     const { performance } = useOutletContext();
 
-    // Now, we can check for the performance data and its timeline
     if (!performance || !performance.timeline) {
         return <div>Loading performance data...</div>;
     }

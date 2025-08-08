@@ -12,12 +12,12 @@ const app = express();
 
 // Configure CORS to allow requests from your frontend's origin
 const corsOptions = {
-    origin: 'http://localhost:5173', // Change this to your frontend's port
-    optionsSuccessStatus: 200 // For legacy browser support
+    origin: 'http://localhost:5173',
+    optionsSuccessStatus: 200
 };
 
 // Middleware
-app.use(cors(corsOptions)); // Pass the options to the cors middleware
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Connect to MongoDB
